@@ -22,10 +22,10 @@ example_list_function()
 # Create a list named students containing at least three student names (strings).
 # Assign the second student’s name to a variable named first_student.
 # Assign the last student’s name to a variable named last_student.
-
+students = ["Sayed","Yusuf","Noor","Omar"]
 def manage_students():
 # your code here
-    students = ["Sayed","Yusuf","Noor","Omar"]
+    
     first_student = students[1]
     last_student = students[3]
     return first_student, last_student
@@ -38,13 +38,14 @@ print('Exercise 1:', manage_students())
 # Create a tuple named foods containing the same number of foods (strings) as there are names in the students list.
 # Create a variable named meal and assign an empty string to it.
 # Use a for loop to iterate over the strings in foods and append each string to meal.
-foods=("apple", "banana", "pizza", "burger")
+foods=("Apple", "Banana", "Pizza", "Burger", "Taco", "Burrito", "Sandwich","Avocado")
+
 def combine_foods():
 # your code here
-
     meal = ""
     for food in foods:
-        meal += food +" "
+        
+        meal += f"{food} "
     return meal
 # Call the function and print the result
 print('Exercise 2:', combine_foods())
@@ -81,10 +82,10 @@ print('Exercise 4:', hometown_info())
 #
 # Define an empty list named home_town_items.
 # Use a for loop to iterate over the key: value pairs in the home_town dictionary and append a string with the following format to home_town_items: "<key> = <value>"
-
+home_town_items=[]
 def list_home_town_items():
 # your code here
-    home_town_items=[]
+    
 
     for key,value in home_town.items():
         home_town_items.append(f"{key} = {value}")
@@ -95,3 +96,34 @@ def list_home_town_items():
 
 # Call the function and print the result
 print('Exercise 5:', list_home_town_items())
+
+
+
+# Exercise 6: Celebrate Students
+#
+# Using the list of students and a list comprehension, assign to a variable named awesome_students a new list containing strings.
+# For example: ["Tina is awesome!", "Fred is awesome!", "Wilma is awesome!"]
+awesome_students=[]
+def create_awesome_students():
+# your code here
+    for student in students:
+        awesome_students.append(f"{student} is awesome!")
+    return awesome_students
+# Call the function and print the result
+print('Exercise 6:', create_awesome_students())
+
+
+# Exercise 7: Filter Foods
+#
+# Assign to a variable named foods_with_an_a the result of list comprehension that filters the foods tuple to only include food strings that contain the letter 'a'.
+# For example, if foods is a tuple of ('Taco', 'Burrito', 'Sandwich'), foods_with_an_a would be a list equal to ['Taco', 'Sandwich']
+
+def filter_foods_with_a():
+    # your code here
+    foods_with_an_a=[]
+    for food in foods:
+        if 'a' in food.lower():
+            foods_with_an_a.append(f"{food}")
+    return foods_with_an_a
+# Call the function and print the result
+print('Exercise 7:', filter_foods_with_a())
